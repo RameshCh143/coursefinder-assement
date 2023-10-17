@@ -15,22 +15,24 @@
 
 </head>
 <body>
+    <div class="main-container">
 	<!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <a href="#" class="leftarrow-img"><img src="assets/leftarrow.svg" alt="Left Arrow" /></a>
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <a href="index.html"><img src="assets/sidebar-icons/home.png" alt="Home Icon" /><span>Dashboard</span> </a>
                     </li>
                     <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="assets/sidebar-icons/students-icon.png" alt="Home Icon" /><span>Students</span></a>
+                        <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <img src="assets/sidebar-icons/students-icon.png" alt="Home Icon" /><span>Students</span></a>
                     </li>
                     <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="assets/sidebar-icons/application-icon.png" alt="Home Icon" /><span>Applications</span></a>
+                        <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <img src="assets/sidebar-icons/application-icon.png" alt="Home Icon" /><span>Applications</span></a>
                     </li>
                     <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="assets/sidebar-icons/search-icon.png" alt="Home Icon" /><span>Search Courses</span></a>
+                        <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <img src="assets/sidebar-icons/search-icon.png" alt="Home Icon" /><span>Search Courses</span></a>
                     </li>
                     <li>
                         <a href="#" class="dropdown-toggle" laria-haspopup="true" aria-expanded="false"> <img src="assets/sidebar-icons/wallet-icon.png" alt="Home Icon" /><span>Wallet</span></a>
@@ -101,9 +103,9 @@
         <div class="content">
             <!-- Animated -->
             <div class="content-header">
-                <div class="row">
+                <div class="row main-content-row">
                     <div class="col-lg-6 col-md-6 left-header-content">
-                        <p>Hey, Good Morning <string>Diksha!</string></p> 
+                        <p>Hey, Good Morning <strong>Diksha!</strong></p> 
                     </div>
                     <div class="col-lg-6 col-md-6 right-header-content">
                         <div class="dashbord-buttons">
@@ -115,8 +117,50 @@
             </div>
             <div class="main-content">
                 <div class="row">
-                    <div class="col-md-9 col-sm-12">
-                        <div class="row numbers-section">
+                    <div class="col-sm-12 col-md-12 col-lg-9">
+                        <div class="row mt-3 filter-form-section">
+                            <div class="col-12 content-main-section">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="filter-form-main">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 filter-input">
+                                                    <img src="assets/calendar.png" alt="Calender Icon" class="calendericon" />
+                                                    <input type="text" id="datepicker" name="filter-year" class="form-control filter-year" placeholder="Years" />
+                                                    <img src="assets/chevron-dropdown.png" alt="Dropdown Icon" class="downarrow-icon">
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 filter-input">
+                                                    <img src="assets/calendar.png" alt="Calender Icon" class="calendericon" />
+                                                    <input type="text" id="date-created" name="date-created" class="date-created form-control" placeholder="Date Created" />
+                                                    <img src="assets/chevron-dropdown.png" alt="Dropdown Icon" class="downarrow-icon">
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 filter-input">
+                                                    <img src="assets/calendar-tick.png" alt="Calendar Tick Icon" class="calendericon" />
+                                                    <input type="text" name="intake" id="intake" class="intake form-control" placeholder="Select intake" />
+                                                    <img src="assets/chevron-dropdown.png" alt="Dropdown Icon" class="downarrow-icon">
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-6 filter-input">
+                                                    <img src="assets/country-icon.png" alt="Country Icon" class="calendericon" />
+                                                    <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                                                        <option selected>Countries</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <img src="assets/chevron-dropdown.png" alt="Dropdown Icon" class="downarrow-icon" />
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-3">
+                                                    <input type="Submit" name="submit" class="btn btn-outline-primary filter-btn" value="Apply filters" />
+                                                </div>
+                                            </div>
+                                            <!--div class="row mt-4" -->
+                                            <!-- </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row numbers-section"><!-- Card section start -->
                             <div class="col-lg-3 col-md-6 card-main card-1">
                                 <div class="card">
                                     <div class="card-body">
@@ -186,8 +230,9 @@
                                     <button class="btn btn-outline-primary btn-sm">Offer letter</button>
                                 </div>
                             </div>
-                        </div>
+                        </div><!-- Card section end -->
                         <div class="row table-section"> <!-- Tab section Start -->
+                            <div class="col-12 content-main-section">
                             <div class="card">
                                 <div class="card-header">
                                     <h4>Applications</h4>
@@ -208,125 +253,125 @@
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                             <div class="card">
-                            <div class="card-body">
-                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Ack. no.</th>
-                                            <th>Student name</th>
-                                            <th>University</th>
-                                            <th>program</th>
-                                            <th>Pending Since</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-accountno-field">117110/22-23</td>
-                                            <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
-                                            <td class="table-university-field"><p>Sheffield Hallam...</p></td>
-                                            <td class="table-program-field"><p>Msc Internatio..</p></td>
-                                            <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                        <div class="card-body">
+                                            <table id="bootstrap-data-table" class="table responsive w-100">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Ack. no.</th>
+                                                        <th>Student name</th>
+                                                        <th>University</th>
+                                                        <th>program</th>
+                                                        <th>Pending Since</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Viren Shah</p><p>virenshah@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Tushar Joshi</p><p>tusharjoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Test Joshi</p><p>testjoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Raju Joshi</p><p>rajujoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Varun Joshi</p><p>varunjoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Taja Joshi</p><p>tajajoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table-accountno-field">117110/22-23</td>
+                                                        <td class="table-name-field"><p>Rishi Joshi</p><p>rishijoshi@gmail.com</p></td>
+                                                        <td class="table-university-field"><p>Sheffield Hallam...</p></td>
+                                                        <td class="table-program-field"><p>Msc Internatio..</p></td>
+                                                        <td class="table-date-field"><p>1 Day</p><p>12 Dec 2022</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                          </div>
                                      </div>
                                  </div>
@@ -344,10 +389,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div> 
+                            </div>                           
                         </div> <!-- Tab section end -->
                         <div class="row service-slider"><!-- bottom slider start -->
-                            <div class="col-md-12">
+                            <div class="col-md-12 content-main-section">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                     <ul class="carousel-indicators">
                                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -404,12 +450,12 @@
                                 </div>                                
                             </div>
                         </div> <!-- bottom slider end -->
-                    </div>
-                    <div class="col-md-3">
+                    </div><!-- Main section end-->
+                    <div class="col-md-12 col-lg-3"><!-- right sidebar start -->
                         <div class="row news-bullits-section">
                             <div class="cal-12">
-                                <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                                    <ul class="carousel-indicators">
+                                <div id="carouselIndicators" class="carousel slide" data-ride="carousel-2">
+                                    <ul class="carousel-indicators carousel-indicators-news">
                                         <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
                                         <li data-target="#carouselIndicators" data-slide-to="1"></li>
                                         <li data-target="#carouselIndicators" data-slide-to="2"></li>
@@ -422,10 +468,10 @@
                                                 </div>
                                                 <div class="carousel-item active">
                                                     <div class="row">
-                                                        <div class="col-md-3 col-sm-3">
+                                                        <div class="col-3 col-sm-3 col-lg-12 col-xl-3">
                                                             <img src="assets/news-icon.png" alt="New Icon" />
                                                         </div>
-                                                        <div class="col-md-9 col-sm-9">
+                                                        <div class="col-9 col-sm-9 col-lg-12 col-xl-9">
                                                             <div class="services-left-section">
                                                                 <h4>Indian student tops harward!</h4>
                                                                 <p>Indian student tops harward university and makes history. Its the first time for an Indian student to do this. <a href="#">Read More</a></p>
@@ -435,10 +481,10 @@
                                                 </div>
                                                 <div class="carousel-item">
                                                     <div class="row">
-                                                        <div class="col-md-3 col-sm-3">
+                                                        <div class="col-3 col-sm-3 col-lg-12 col-xl-3">
                                                             <img src="assets/news-icon.png" alt="New Icon" />
                                                         </div>
-                                                        <div class="col-md-9 col-sm-9">
+                                                        <div class="col-9 col-sm-9 col-lg-12 col-xl-9">
                                                             <div class="services-left-section">
                                                                 <h4>Indian student tops harward test 2!</h4>
                                                                 <p>Indian student tops harward university and makes history. Its the first time for an Indian student to do this. <a href="#">Read More</a></p>
@@ -448,10 +494,10 @@
                                                 </div>
                                                 <div class="carousel-item">
                                                     <div class="row">
-                                                        <div class="col-md-3 col-sm-3">
+                                                        <div class="col-3 col-sm-3 col-lg-12 col-xl-3">
                                                             <img src="assets/news-icon.png" alt="New Icon" />
                                                         </div>
-                                                        <div class="col-md-9 col-sm-9">
+                                                        <div class="col-9 col-sm-9 col-lg-12 col-xl-9">
                                                             <div class="services-left-section">
                                                                 <h4>Indian student tops harward test 3!</h4>
                                                                 <p>Indian student tops harward university and makes history. Its the first time for an Indian student to do this. <a href="#">Read More</a></p>
@@ -480,11 +526,11 @@
                                             <div class="col-md-12">
                                                 <div class="event-details">
                                                     <div class="row">
-                                                        <div class="col-sm-9 col-md-9 event-left-content">
+                                                        <div class="col-9 col-sm-9 col-md-9 event-left-content">
                                                             <p class="event-title">Event Name Goes here</p>
                                                             <span class="event-date">7 Jan 2023</span>
                                                         </div>
-                                                        <div class="col-sm-3 col-md-3 event-right-content">
+                                                        <div class="col-3 col-sm-3 col-md-3 event-right-content">
                                                             <div class="event-time">
                                                                 <p class="time">4:30</p>
                                                                 <p class="time-symbel">PM</p>
@@ -543,10 +589,10 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-md-4 col-sm-4">
+                                            <div class="col-md-4 col-sm-4 col-4">
                                                 <img src="assets/contact-img.png" alt="Contact Icon" />
                                             </div>
-                                            <div class="col-md-8 col-sm-8 contact-details">
+                                            <div class="col-md-8 col-sm-8 col-8 contact-details">
                                                 <h4>Santosh Sharma</h4>
                                                 <p>+91 9876543210 | Hyderabad</p>
                                             </div>
@@ -559,10 +605,10 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-md-4 col-sm-4">
+                                            <div class="col-md-4 col-sm-4 col-4">
                                                 <img src="assets/contact-img.png" alt="Contact Icon" />
                                             </div>
-                                            <div class="col-md-8 col-sm-8 contact-details">
+                                            <div class="col-md-8 col-sm-8 col-8 contact-details">
                                                 <h4>Santosh Sharma</h4>
                                                 <p>+91 9876543210 | Hyderabad</p>
                                             </div>
@@ -575,10 +621,10 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-md-4 col-sm-4">
+                                            <div class="col-md-4 col-sm-4 col-4">
                                                 <img src="assets/contact-img.png" alt="Contact Icon" />
                                             </div>
-                                            <div class="col-md-8 col-sm-8 contact-details">
+                                            <div class="col-md-8 col-sm-8 col-8 contact-details">
                                                 <h4>Santosh Sharma</h4>
                                                 <p>+91 9876543210 | Hyderabad</p>
                                             </div>
@@ -596,11 +642,13 @@
             
         </div>
     </div>
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
     <!-- script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
     <script src="js/main.js"></script>
 
     <script src="js/datatables.min.js"></script>

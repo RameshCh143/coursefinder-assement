@@ -64,6 +64,20 @@ jQuery(document).ready(function($) {
 		} 
 		
 	});
-  
+
+	// date picker
+	$('#date-created, #intake').datepicker();
+
+	$("#datepicker").datepicker({
+	    format: "yyyy",
+	    viewMode: "years", 
+	    minViewMode: "years"
+	});
+  	
+  	$('#carouselIndicators').carousel({
+		interval: 4000,
+		wrap: true,
+		keyboard: true
+ 	});
  
 });

@@ -112,6 +112,9 @@ button:focus {
 img {
     max-width: 100%; 
 }
+strong {
+    font-weight: bold;
+}
 
 .btn,
 button,
@@ -133,6 +136,9 @@ textarea {
 
 canvas {
     max-width: 100%; 
+}
+.content-main-section {
+    padding-left: 0;
 }
 
 /* Global Styles */
@@ -173,6 +179,11 @@ aside.left-panel:hover {
     float: left;
     padding: 0;
     padding-top: 50px; 
+}
+.main-menu .leftarrow-img {
+    position: absolute;
+    top: 10px;
+    right: -25px;
 }
 .navbar .menu-title {
     color: #41434d;
@@ -217,7 +228,7 @@ aside.left-panel:hover {
     display: inline-block;
     font-size: 16px;
     line-height: 24px;
-    padding: 10px 3px;
+    padding: 10px 20px;
     position: relative;
     width: 100%; 
     text-decoration: none;
@@ -664,7 +675,7 @@ header .form-inline .search-form.close {
 .header-left .news-link a {
     font-family: "DMSans-Regular";
     font-weight: 400;
-    size: 16px;
+    font-size: 16px;
     line-height: 24px;
     color: #fff;
     text-decoration: underline;
@@ -775,6 +786,59 @@ header .form-inline .search-form.close {
 }
 
 /* Main card numbers card section start*/
+
+/* filter form css start */
+.filter-form-main {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.filter-form-main input[type="text"]::placeholder {
+    color: #8F9297;
+}
+.filter-form-main input[type="text"], .filter-form-main select {
+    font-family: "DMSans-Regular";
+    font-size: 16px;
+    line-height: 24px;
+    color: #8F9297;
+    border: 1px solid #EBEBEB;
+    position: relative;
+    padding: 10px 10px 10px 35px;
+}
+.filter-form-main .filter-input {
+    position: relative;
+    padding-bottom: 15px;
+}
+.filter-form-main input[type="text"]:focus, 
+.filter-form-main select:focus {
+    box-shadow: none;
+}
+.filter-form-main select {
+    --bs-form-select-bg-img: none;
+}
+.filter-form-main .filter-input .calendericon {
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 22px;
+    z-index: 2;
+}
+.filter-form-main .filter-input .downarrow-icon {
+    position: absolute;
+    top: 13px;
+    bottom: 0;
+    right: 25px;
+    z-index: 2;
+}
+.filter-form-main .filter-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "DMSans-Medium";
+}
+
+/* filter form css end */
+
 .numbers-section {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -901,6 +965,30 @@ header .form-inline .search-form.close {
 }
 .event-city p {
     margin-bottom: 0;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "DMSans-Regular";
+    color: #3B3B3B;
+    padding-left: 30px;
+    position: relative;
+}
+.event-city p.university:before {
+    content: url('../assets/university.svg');
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: 1;
+}
+.event-city p.event-person-name:before {
+    content: url('../assets/user.svg');
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: 1;
 }
 .upcoming-events-section .registerbtn {
     display: block;
@@ -922,16 +1010,28 @@ header .form-inline .search-form.close {
     color: #3B3B3B;
     padding-bottom: 15px;
 }
+.news-bullits-section .carousel-indicators-news {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    margin-left: 15%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    margin-right: 15%;
+}
 .news-bullits-section .card-body {
     padding-bottom: 30px;
 }
-.news-bullits-section .carousel-indicators li.active {
+.news-bullits-section .carousel-indicators-news li.active {
     color: #3B3B3B;
 }
-.news-bullits-section .carousel-indicators li {
+.news-bullits-section .carousel-indicators-news li {
     padding-left: 10px;
     border-radius: 50%;
     color: #D8DBDD;
+    cursor: pointer;
 }
 .news-bullits-section .services-left-section p, 
 .news-bullits-section .services-left-section a {
@@ -941,7 +1041,7 @@ header .form-inline .search-form.close {
     font-family: "DMSans-Regular";
 
 }
-.news-bullits-section .carousel-indicators {
+.news-bullits-section .carousel-indicators-news {
     bottom: 20px;
 }
 .news-bullits-section .services-left-section a {
@@ -991,7 +1091,6 @@ header .form-inline .search-form.close {
     align-items: center;
 }
 .contact-section .card-body h4 {
-    font-weight: 21px;
     font-size: 16px;
     color: #226CF5;
     font-family: "DMSans-Regular";
@@ -1016,6 +1115,10 @@ header .form-inline .search-form.close {
 .table-section {
     padding-top: 15px;
     padding-bottom: 15px;
+}
+.table-section .card-body {
+    padding-left: 0;
+    padding-right: 0;
 }
 .table-section .card-header {
     background-color: inherit;
@@ -1118,6 +1221,12 @@ header .form-inline .search-form.close {
     color: #3B3B3B;
     margin-bottom: 0;
 }
+#bootstrap-data-table tbody tr {
+    border-top: 1px solid #939393 !important;
+}
+#bootstrap-data-table tbody tr:first-child {
+    border-top: none !important;
+}
 #bootstrap-data-table .table-name-field p:last-child, 
 #bootstrap-data-table .table-date-field p:last-child {
     color: #939393;
@@ -1156,9 +1265,9 @@ header .form-inline .search-form.close {
     box-shadow: 0px 2px 15px 0px #EBEBEB;
 }
 .dataTables_paginate .pagination li:hover a {
-    background: #292b35;
+    background: none;
     border-color: #292b35;
-    color: #fff; 
+    color: inherit; 
 }
 .paginate_button.page-item.next,
 .paginate_button.page-item.previous {
@@ -1213,6 +1322,11 @@ header .form-inline .search-form.close {
 }
 .service-slider .carousel-indicators li {
     padding-left: 10px;
+    color: #D8DBDD;
+    cursor: pointer;
+}
+.service-slider .carousel-indicators li.active {
+    color: #3B3B3B;
 }
 
 .service-slider .carousel-item h2 {
@@ -1319,7 +1433,9 @@ footer.site-footer .footer-inner a {
     color: #6a7074; 
 }
    
-
+.main-content-row {
+    padding-top: 25px;
+}
 /* media query start */
 @media (max-width: 575px) {
     .header-search {
@@ -1344,6 +1460,16 @@ footer.site-footer .footer-inner a {
     .right-panel .menutoggle {
         width: 20px; 
     } 
+    .news-link img {
+        display: none;
+    }
+    .filter-form-main {
+        padding-left: 0px;
+    }
+    #bootstrap-data-table_wrapper {
+        max-width: 350px !important;
+        overflow-y: scroll;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1366,8 +1492,18 @@ footer.site-footer .footer-inner a {
     .main-menu .nav a span {
         display: none;
     }
+    .navbar .navbar-nav li > a {
+        padding: 5px !important;
+    }
+    .right-header-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .right-panel .top-left {
+        width: 270px;
+    }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .right-panel {
         margin-left: 5px;
     }
@@ -1399,6 +1535,9 @@ footer.site-footer .footer-inner a {
     .navbar .main-menu {
         float: none;
         padding-bottom: 70px; 
+    }
+    .main-menu .leftarrow-img {
+        display: none;
     }
     .left-panel {
         display: none; 
@@ -1441,7 +1580,7 @@ footer.site-footer .footer-inner a {
         margin-left: 0; 
     }
     aside.left-panel {
-        top: 105px;
+        top: 45px;
     }
     #left-panel {
         max-width: 100%;
@@ -1466,6 +1605,20 @@ footer.site-footer .footer-inner a {
     .order-table .avatar, .order-table .serial {
         display: none; 
     } 
+
+    .contact-section .card-body img {
+        width: 100px;
+    }
+    .contact-section .card-body .contact-details h4 {
+        font-size: 26px;
+        padding-bottom: 5px;
+    }
+    .contact-section .card-body .contact-details p {
+        font-size: 16px;
+    }
+    #carouselIndicators .carousel-item .row img {
+        width: 80px;
+    }
 }
 /* left menu panel start*/
 @media (max-width: 1024px) {
@@ -1532,7 +1685,7 @@ footer.site-footer .footer-inner a {
     }
     aside.left-panel .navbar .navbar-nav li > a {
         max-width: 60px;
-        padding-left: 0; 
+        padding-left: 25px; 
     }
     aside.left-panel .navbar .navbar-nav li.menu-item-has-children {
         overflow: hidden; 
@@ -1639,5 +1792,25 @@ footer.site-footer .footer-inner a {
         right: 0;
         top: .75rem;
         position: absolute; 
+    }
+}
+@media (min-width: 1800px) {
+    .main-container {
+        max-width: 1800px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        background-color: #f1f2f7;
+    }
+    aside.left-panel {
+        position: relative;
+    }
+    .right-panel {
+        margin-left: 20px;
+    }
+    .right-panel #header {
+        max-width: 1800px;
+        width: 100%;
+        margin: 0 auto;
     }
 }
